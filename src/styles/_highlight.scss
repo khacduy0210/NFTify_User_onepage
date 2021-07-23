@@ -1,0 +1,193 @@
+.highlight{
+    margin: auto;
+    padding-bottom: 126px;
+    background: #FCFCFD;
+    .container{
+        max-width: 1120px;
+        margin: auto;
+        // padding: 0px;
+        .highlight-content{
+            padding-top: 64px;
+            .highlight-header{
+                h2{
+                    font-weight: 600;
+                    font-size: 40px;
+                    line-height: 48px;
+                    /* identical to box height, or 120% */
+    
+                    letter-spacing: -0.01em;
+    
+                    /* Title */
+    
+                    color: #23262F;
+                }
+            }
+            .highlight-list{
+                display: flex;
+                padding-top: 44px;
+                justify-content: space-between;
+                margin: auto;
+                 
+                .highlight-item-other{
+                    padding: 0px;
+                    // width: 46%;
+                    .highlight-item-other-1{
+                        display: block;
+                        margin-top: 0px;
+                        // margin-left: auto;
+                        margin-right: 0px;
+                        max-width: 204px;
+                        width: 100%;
+                        height: 275px;
+                        .NewArrival-item-image{
+                            max-width: 177px;
+                            height: 163px;
+                            margin-bottom: 12px;
+                        }
+                        .NewArrival-item-name{
+                            font-size: 14px;
+                            line-height: 21px;
+                        }
+                        .NewArrival-item{
+                            font-size: 12px;
+                            line-height: 18px;
+                            /* identical to box height, or 150% */
+                            padding-top: 2px;
+                            padding-bottom: 4px;
+                            letter-spacing: 0.1px;
+                        }
+                        .NewArrival-item-price{
+                            font-size: 14px;
+                            line-height: 21px;
+                            /* identical to box height, or 150% */
+
+                            letter-spacing: -0.003em;
+                            span{
+                                font-size: 12px;
+                                line-height: 18px;
+                                /* identical to box height, or 150% */
+
+                                letter-spacing: 0.1px;
+                            }
+                        }
+                    }
+                    .item-2 {
+                        // margin-top: 10px;
+                        .highlight-item-other-2{
+                        
+                            margin-left: auto;
+                            margin-right: 0px;
+                            max-width: 204px;
+                            height: 275px;
+                            .comingSoon-item-image{
+                                max-width: 177px;
+                                width: 100% ;
+                                height: 163px;
+                                margin-bottom: 14px;
+                            }
+                            .comingSoon-item-name{
+                                font-size: 14px;
+                                line-height: 21px;
+                            }
+                            .comingSoon-item-edit{
+                                font-size: 12px;
+                                line-height: 18px;
+                                /* identical to box height, or 150% */
+                                padding-top: 2px;
+                                padding-bottom: 4px;
+                                letter-spacing: 0.1px;
+                            }
+                            .comingSoon-item-status{
+                               font-size: 10px;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    @media (min-width:1440px) {
+        .container{
+            padding: 0px;
+        }
+    }
+    @media (min-width:1024px) {
+        .highlight-item-other{
+            width: 46%;
+            .item{
+                width: 100%;
+                .highlight-item-other-1{
+                    // width: 50%;
+                    // max-width: 204px;
+                    // height: 275px;
+                    margin-left: auto;
+                }
+                
+            }
+            .item-2 {
+                margin-top: 10px;
+            }
+        }
+
+    }
+    @media   (max-width:1023px) {
+        .highlight-list{
+            flex-direction: column;
+            .highlight-item-other{
+                
+                flex-direction: row;
+                
+                display: flex;
+                max-width: 448px;
+                width: 100%;
+                
+                .highlight-item-other-1{
+                    margin-left: 0px;
+                }
+                .item{
+                    width: 50%;
+                }
+                .item-2 {
+                    margin-top: 0px;
+                    .item{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @media   (max-width:426px) {
+        .highlight-list{
+            flex-direction: column;
+            .highlight-item-other{
+                
+                flex-direction: column;
+                display: flex;
+                max-width: 100%;
+                width: 100%;
+                
+                .highlight-item-other-1{
+                    margin-left: 0px;
+                }
+                .item{
+                    width: 100%;
+                    .highlight-item-other-1{
+                        width: 100%;
+                        max-width: 100%;
+                        .NewArrival-item-image{
+                            max-width: 100%;
+                        }
+                    }
+                }
+                .item-2 {
+                    margin-top: 10px;
+                    .item{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+}

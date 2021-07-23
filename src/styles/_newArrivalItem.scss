@@ -1,0 +1,117 @@
+.item{
+    .NewArrival-item{
+        display: block;
+        max-width: 269px;
+        height: 352px;
+        margin: 35px 0px 0px auto;
+        background: #FFFFFF;
+        flex-direction: column;
+        // text-align: center;
+        box-shadow: 0px 64px 64px -48px rgba(31, 47, 70, 0.12);
+        border-radius: 16px;
+    
+        
+        .NewArrival-item-content{
+            display: block; 
+            margin: auto;
+            padding: 18px;
+            .NewArrival-item-image{
+                display: block;
+                max-width: 233px;
+                height: 214px;
+                width: 100%;
+                // padding-bottom: 16px;
+                margin: 0px 0px 16px 0px;
+                border-radius: 12px;
+            }
+            .NewArrival-item-name{
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 26px;
+                /* identical to box height, or 162% */
+    
+    
+                /* Title */
+                // padding-top: 14px;
+    
+                color: #23262F;
+            }
+            .NewArrival-item-edit{
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                /* identical to box height, or 150% */
+    
+    
+                /* Content 3 */
+    
+                color: #777E90;
+                padding-top: 4px;
+                padding-bottom: 8px;
+            }
+            .NewArrival-item-price{
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 26px;
+                /* identical to box height, or 162% */
+    
+                letter-spacing: -0.003em;
+    
+                /* Title */
+    
+                color: #23262F;
+                span{
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 21px;
+                    /* identical to box height, or 150% */
+    
+    
+                    /* Content 3 */
+    
+                    color: #777E90;
+    
+    
+                    /* Inside Auto Layout */
+    
+                    flex: none;
+                    order: 1;
+                    flex-grow: 0;
+                    margin: 0px 8px;
+                }
+            }
+        }
+    }
+}
+@media (min-width:1120px) {
+    .item{
+        width: 25%;
+    }
+}
+@media (max-width:1119px) {
+    .item{
+        width: 33%;
+        
+    }
+}
+@media (max-width:820px) {
+    .item{
+        width: 50%;
+        
+    }
+}
+@media (max-width:545px) {
+    .item{
+        width: 100%;
+        .NewArrival-item{
+            max-width: 100%;
+            .NewArrival-item-content{
+                max-width: 100%;
+                .NewArrival-item-image{
+                    max-width: 100%;
+                }
+            }
+        }
+        
+    }
+}

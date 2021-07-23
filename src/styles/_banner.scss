@@ -1,0 +1,27 @@
+.banner{
+    padding-top: 52px;
+    padding-bottom: 42px;
+    background: #F8F8FB;
+    .container{
+        max-width: 1120px;
+        margin: auto;
+        // padding: 0px;
+        
+    }
+    @media (min-width:1440px) {
+        .container{
+            padding: 0px;
+        }
+    }
+    @media (max-width: 1024px) {
+        .container{
+            padding: auto;
+        }
+    }
+    
+}
+// @media (max-width: 767px) {
+//     .banner{
+//         display: none;
+//     }
+// }

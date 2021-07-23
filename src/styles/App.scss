@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
+@import "~bootstrap/scss/bootstrap";
+//Utility
+@import './reset';
+@import './variables';
+
+//Page
+@import './index.scss';
+
+//Components
+@import './header';
+@import './footer';
+//banner 
+@import './banner';
+@import './bannerItem';
+
+//highlight
+@import './highlight';
+@import './highlightItem';
+
+// new arivals
+@import './newArrival';
+@import './newArrivalItem';
+
+//coming soon
+@import './coming_soon';
+@import './coming_soon_item';
+
+
+   //category
+@import './category';
+@import './categoryItem';
