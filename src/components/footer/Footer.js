@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from 'react'
-import logo from '../assets/Logo.svg';
-import twitter from '../assets/social_media/Twitter.svg'
-import discord from '../assets/social_media/Discord.svg'
-import instagram from '../assets/social_media/Instagram.svg'
-import medium from '../assets/social_media/Medium.svg'
-import telegram from '../assets/social_media/Telegram.svg'
+import logo from '../../assets/Logo.svg';
+import twitter from '../../assets/social_media/Twitter.svg'
+import discord from '../../assets/social_media/Discord.svg'
+import instagram from '../../assets/social_media/Instagram.svg'
+import medium from '../../assets/social_media/Medium.svg'
+import telegram from '../../assets/social_media/Telegram.svg'
 
 export default function Footer() {
     const [aboutValues, setAboutValues] = useState(false);
     const [contactValues, setContactValues] = useState(false);
     const HandleAboutClick = () => {
         setAboutValues(!aboutValues);
-        if(!aboutValues == true ) {setContactValues(false);}
+        if(!aboutValues === true ) {setContactValues(false);}
     }
     
     const handleContactClick = () => {
         setContactValues(!contactValues);
-        if(!contactValues == true) {setAboutValues(false);}
+        if(!contactValues === true) {setAboutValues(false);}
     }
     useEffect(() => {
-        if(contactValues == true) {setAboutValues(false);}
-        if(aboutValues == true ) {setContactValues(false);}
-    },[]);
+        if(contactValues === true) {setAboutValues(false);}
+        if(aboutValues === true ) {setContactValues(false);}
+    },[contactValues,aboutValues]);
     return ( 
         <div className = "footer" > 
             <div className="container">
@@ -33,8 +33,8 @@ export default function Footer() {
                     </div> 
                 </div>      
                 <div className="footer-right-side">
-                    <label for="checkbox__about" className = "about" > ABOUT 
-                        <input type="checkbox" id="checkbox__about" style={{display : 'none'}} checked={aboutValues} onClick={HandleAboutClick} />
+                    <label htmlFor="checkbox__about" className = "about" > ABOUT 
+                        <input type="checkbox" id="checkbox__about" style={{display : 'none'}} defaultChecked={aboutValues} onClick={HandleAboutClick} />
                         <div className="about-list">
                             <div className="about-item"><a href="#"> About us </a></div>
                             <div className="about-item"><a href="#" > Terms of Service </a></div>
@@ -42,8 +42,8 @@ export default function Footer() {
                             <div className="about-item"><a href="#" > FAQs </a></div>
                         </div>
                     </label> 
-                    <label for="checkbox__contact-us" className = "contact-us" > CONTACT 
-                    <input type="checkbox" id="checkbox__contact-us" style={{display : 'none'}} checked={contactValues} onClick={handleContactClick}/>
+                    <label htmlFor="checkbox__contact-us" className = "contact-us" > CONTACT 
+                    <input type="checkbox" id="checkbox__contact-us" style={{display : 'none'}} defaultChecked={contactValues} onClick={handleContactClick}/>
                     <div className="contact-list">
                             <div className="contact-item"><a href="#" ><span className="far fa-envelope"/>support@nftify.com</a></div>
                             <div className="contact-item"><a href="#" ><span className="fas fa-phone"/>(+84) 123 456 789</a></div>
@@ -51,11 +51,11 @@ export default function Footer() {
                     </label> 
                     <div className = "social-media" > SOCIAL MEDIA 
                         <div className="socail-list">
-                            <a href="#" className="icon"><img src={twitter}/></a>
-                            <a href="#" className="icon"><img src={medium}/></a>
-                            <a href="#" className="icon"><img src={telegram}/></a>
-                            <a href="#" className="icon"><img src={discord}/></a>
-                            <a href="#" className="icon"><img src={instagram}/></a>
+                            <a href="#" className="icon"><img src={twitter} alt="twitter-icon"/></a>
+                            <a href="#" className="icon"><img src={medium} alt="medium-icon"/></a>
+                            <a href="#" className="icon"><img src={telegram} alt="telegram-icon"/></a>
+                            <a href="#" className="icon"><img src={discord} alt="discord-icon"/></a>
+                            <a href="#" className="icon"><img src={instagram} alt="instagram-icon"/></a>
                         </div>
                     </div>     
                 </div> 

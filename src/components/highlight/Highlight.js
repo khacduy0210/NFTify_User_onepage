@@ -43,19 +43,20 @@ export default function Highlight() {
                         <div className="highlight-item">
                             {products.map((product,index) => 
                                 { 
-                                    if (index == 0) {
+                                    if (index == 2) {
                                         // console.log(product.categoriesId);
                                         return (
                                             <HighlightItem 
-                                        imageUrl={product.imageUrl}
-                                        nameOfItem={product.name}
-                                        categoriesId={(product.categoriesId)}
-                                        numberOfCopies={product.numberOfCopies}
-                                        saleQuantity={(product.sellOrder).saleQuantity}
-                                        currencyName={(product.sellOrder).currencyName}
-                                        price={(product.sellOrder).price}
-                                        realPrice={(product.sellOrder).price * (product.sellOrder).exchangeRate}
-                                        />
+                                            key={index}
+                                            imageUrl={product.imageUrl}
+                                            nameOfItem={product.name}
+                                            categoriesId={(product.categoriesId)}
+                                            numberOfCopies={product.numberOfCopies}
+                                            saleQuantity={(product.sellOrder).saleQuantity}
+                                            currencyName={(product.sellOrder).currencyName}
+                                            price={(product.sellOrder).price}
+                                            realPrice={(product.sellOrder).price * (product.sellOrder).exchangeRate}
+                                            />
                                         )
                                     };
                                     
@@ -69,7 +70,7 @@ export default function Highlight() {
                             
                         {products.map((product,index) => 
                             { 
-                                if (index !== 2 && index !== 1 && (product.sellOrder).status === 1) {
+                                if (index !== 0 && index !== 2 && (product.sellOrder).status === 1) {
                                     return (
                                         <NewArrivalItem 
                                             key={index}
@@ -84,7 +85,7 @@ export default function Highlight() {
                                         />
                                     )
                                 };
-                                if ((product.sellOrder).status === 2 && index !== 2 && index !== 1) {
+                                if ((product.sellOrder).status === 2 && index !== 2 && index !== 0) {
                                     return (
                                         <ComingSoonItem 
                                             key={index}
@@ -104,7 +105,7 @@ export default function Highlight() {
                         <div className="item-2">
                             {products.map((product,index) => 
                                 { 
-                                    if (index !== 2 && index !== 0 && (product.sellOrder).status === 1) {
+                                    if (index !== 1 && index !== 2 && (product.sellOrder).status === 1) {
                                         return (
                                             <NewArrivalItem 
                                                 key={index}
@@ -119,7 +120,7 @@ export default function Highlight() {
                                             />
                                         )
                                     };
-                                    if ((product.sellOrder).status === 2 && index !== 2 && index !== 0) {
+                                    if ((product.sellOrder).status === 2 && index !== 1 && index !== 2) {
                                         return (
                                             <ComingSoonItem 
                                                 key={index}

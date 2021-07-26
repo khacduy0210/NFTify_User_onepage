@@ -17,14 +17,14 @@ export default function Header() {
                     <div className="left-side">
                     
                     {/*nav on mobile */}
-                        <label for="checkbox-bars" className="nav-mobile">
+                        <label htmlFor="checkbox-bars" className="nav-mobile">
                             <img className="bars-icon" src={bars}/>
                         </label>
                         <input type="checkbox" id="checkbox-bars" style={{display : 'none'}}/>
-                        <label for="checkbox-bars" className="nav-overlay"/>
+                        <label htmlFor="checkbox-bars" className="nav-overlay"/>
 
                         <ul className="navbar-mobile">
-                            <label for="checkbox-bars" className="nav-mobile-close">
+                            <label htmlFor="checkbox-bars" className="nav-mobile-close">
                                 <img className="close-icon" src={close}/>
                             </label>
                             <li className="nav_mobile-item active"><img className="nav_mobile-icon" src={home} /><a href="#" className="nav-link "> Home </a></li>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/App.scss';
 import Header from './components/header/Header';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 import Category from './components/category/Category';
 import ComingSoon from './components/comingSoon/ComingSoon';
 import NewArrival from './components/newArrivals/NewArrival'

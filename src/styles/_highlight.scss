@@ -36,12 +36,9 @@
                         margin-top: 0px;
                         // margin-left: auto;
                         margin-right: 0px;
-                        max-width: 204px;
-                        width: 100%;
-                        height: 275px;
+                        
                         .NewArrival-item-image{
-                            max-width: 177px;
-                            height: 163px;
+                            // height: 163px;
                             margin-bottom: 12px;
                         }
                         .NewArrival-item-name{
@@ -74,15 +71,12 @@
                     .item-2 {
                         // margin-top: 10px;
                         .highlight-item-other-2{
-                        
+                            margin-top: 0px;
                             margin-left: auto;
                             margin-right: 0px;
-                            max-width: 204px;
-                            height: 275px;
+                            
                             .comingSoon-item-image{
-                                max-width: 177px;
-                                width: 100% ;
-                                height: 163px;
+                                // height: 163px;
                                 margin-bottom: 14px;
                             }
                             .comingSoon-item-name{
@@ -157,7 +151,32 @@
             }
         }
     }
-    @media   (max-width:426px) {
+    @media (min-width:426px) {
+        .highlight-item-other{
+            .highlight-item-other-1{
+                max-width: 204px;
+                width: 100%;
+                height: 275px;
+                .NewArrival-item-image{
+                    max-width: 177px;
+                    width: 100%;
+                    max-height: 163px;
+                    height: 100%;
+                }
+            }
+            .highlight-item-other-2{
+                max-width: 204px;
+                height: 275px;
+                .comingSoon-item-image{
+                    max-width: 177px;
+                    width: 100% ;
+                    max-height: 163px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    @media   (max-width:425px) {
         .highlight-list{
             flex-direction: column;
             .highlight-item-other{
@@ -169,21 +188,29 @@
                 
                 .highlight-item-other-1{
                     margin-left: 0px;
+                    height: auto;
+                    max-width: 100%;
+                    .NewArrival-item-image{
+                        max-width: 100%;
+                        height: 100%;
+                    }
                 }
                 .item{
                     width: 100%;
-                    .highlight-item-other-1{
-                        width: 100%;
-                        max-width: 100%;
-                        .NewArrival-item-image{
-                            max-width: 100%;
-                        }
-                    }
+                    
                 }
                 .item-2 {
                     margin-top: 10px;
                     .item{
                         width: 100%;
+                        .highlight-item-other-2{
+                            max-width: 100%;
+                            height: auto;
+                            .comingSoon-item-image{
+                                max-width: 100%;
+                                height: 100%;
+                            }
+                        }
                     }
                 }
             }

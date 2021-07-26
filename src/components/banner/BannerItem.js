@@ -6,7 +6,7 @@ export default function BannerItem({banner,title, discription}) {
         <div className="banner-item" >
 
             
-            <table className="banner-image" >
+            <div className="banner-image" >
                 
                 <div className="banner-content">
                     <div className="banner-title">{title}</div>
@@ -14,7 +14,7 @@ export default function BannerItem({banner,title, discription}) {
                     <button className="explore-button">EXPLORE NOW</button>
                 </div>
                 {/* <img src={banner}/> */}
-            </table>
+            </div>
             
             
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 
 
 export default function HighlightItem({imageUrl, nameOfItem, categoriesId,price, saleQuantity, currencyName,realPrice,numberOfCopies}) {
@@ -9,8 +9,8 @@ export default function HighlightItem({imageUrl, nameOfItem, categoriesId,price,
             <div className="highlight-discription col-sm-5">
                 <div className="highlight-name">{nameOfItem}</div>
                 <div className="highlight-tag">
-                    {(categoriesId).map((category) => {
-                        return(<span className="highlight-tag-item">{category.name}</span>)
+                    {(categoriesId).map((category,index) => {
+                        return(<span key={index} className="highlight-tag-item">{category.name}</span>)
                         
                     })}
                 
