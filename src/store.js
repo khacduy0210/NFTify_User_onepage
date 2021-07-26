@@ -7,17 +7,12 @@ import ProductSaga from "./saga/ProductSaga";
 import ProductReducer from "./reducers/ProductReducer";
 import { HighlightReducer } from "./reducers/HighlightReducer";
 import HighlightSaga from "./saga/HighlightSaga";
+import rootReducer from "./reducers/rootReducer";
 
 
 const sagaMiddleware = createSagaMiddleware()
 
-const store = createStore(combineReducers({
-    category : CategoryReducer,
-    product : ProductReducer,
-    highlight : HighlightReducer
-
-
-}), applyMiddleware(sagaMiddleware));
+const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 
 sagaMiddleware.run(CategorySaga);
 sagaMiddleware.run(ProductSaga);

@@ -10,7 +10,7 @@ export default function NewArrivalItem({itemImg, nameOfItem,numberOfCopies,saleQ
             <img src={itemImg} className="NewArrival-item-image"/>
                 <div className="NewArrival-item-name">{nameOfItem}</div>
                 <div className="NewArrival-item-edit">Edition {saleQuantity} of {numberOfCopies} </div>
-                <div className="NewArrival-item-price">{price} {currencyName}<span> ~ ${realPrice}</span></div>
+                <div className="NewArrival-item-price">{price} {currencyName}<span> ~ ${Number(realPrice.toFixed(4))}</span></div>
             </div>
             
         </div>
