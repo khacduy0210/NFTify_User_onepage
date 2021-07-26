@@ -1,37 +1,22 @@
-import React, {useEffect, useState} from'react';
+import React, {useEffect} from'react';
 
 
 
 import ComingSoonItem from '../comingSoon/ComingSoonItem';
 import NewArrivalItem from '../newArrivals/NewArrivalItem';
 
-import axios from 'axios';
+
 import HighlightItem from './highlightItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { requestHighlightApiData } from '../../actions/HighlightAction';
 
 export default function Highlight() {
-    // const [products, setProducts] = useState([]);
-    // useEffect(() => {
-    //     axios.get('https://nftify.ekoiosblock.com/api/user-nftify/highlight/list?objectIds=60da99f200b1370fbe8e97fb%2C60e7fc7893f44b49cb71a95e%2C60da8b2a00b1370fbe8e97bc')
-    //     .then(function (response) {
-    //         setProducts(((response.data).data).records);
-            
-            
-            
-    //     })
-    //     .catch(function (error) {
-    //         // handle error
-    //         console.log(error);
-    //     })
-    // }, []);
     const dispatch = useDispatch();
     const products = useSelector(state => state.highlight);
     useEffect(() => {
         dispatch(requestHighlightApiData());
     },[])
-    // const listProductNew = products.filter((product) => (product.sellOrder).status == 1);
-    // const listProductComing = products.filter((product) => (product.sellOrder).status == 2);
+    
     return (
         <div className="highlight">
             <div className="container">
@@ -43,7 +28,7 @@ export default function Highlight() {
                         <div className="highlight-item">
                             {products.map((product,index) => 
                                 { 
-                                    if (index == 2) {
+                                    if (index === 2) {
                                         // console.log(product.categoriesId);
                                         return (
                                             <HighlightItem 
@@ -57,7 +42,7 @@ export default function Highlight() {
                                             price={(product.sellOrder).price}
                                             realPrice={(product.sellOrder).price * (product.sellOrder).exchangeRate}
                                             />
-                                        )
+                                        );
                                     };
                                     
                                 

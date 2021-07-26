@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from 'react';
+import React, {useEffect} from 'react';
 import NewArrivalItem from './NewArrivalItem';
 import { useDispatch,useSelector } from 'react-redux';
 import { requestProductApiData } from '../../actions/ProductAction';
@@ -10,9 +10,9 @@ export default function NewArrival() {
     console.log(products,'newArrival');
 
     useEffect(() => {
-        dispatch(requestProductApiData())
+        dispatch(requestProductApiData());
     },[])
-    const listProductNew = products.filter((product) => (product.sellOrder).status == 1);
+    const listProductNew = products.filter((product) => (product.sellOrder).status === 1);
     
     // console.log(listProductNew);
     return (

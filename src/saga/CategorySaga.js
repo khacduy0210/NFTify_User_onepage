@@ -2,7 +2,7 @@ import {  put, takeLatest } from "@redux-saga/core/effects";
 
 
 import { REQUEST_CATEGORY_API_DATA, recieveCategoryApiData } from '../actions/CategoryAction';
-import { fetchCategoryApi, getApi } from "../service/api";
+import { getApi } from "../service/api";
 const CATEGORY_API_URL = "user-nftify/category/list";
 function* getCategoryData(action) {
     console.log(action);

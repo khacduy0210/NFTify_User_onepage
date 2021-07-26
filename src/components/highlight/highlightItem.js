@@ -5,7 +5,7 @@ export default function HighlightItem({imageUrl, nameOfItem, categoriesId,price,
     
     return(
         <>
-            <div className="highlight-image col-xs-4"><img src={imageUrl} /></div>
+            <div className="highlight-image col-xs-4"><img src={imageUrl} alt=""/></div>
             <div className="highlight-discription col-sm-5">
                 <div className="highlight-name">{nameOfItem}</div>
                 <div className="highlight-tag">
