@@ -2,17 +2,14 @@ import {  put, takeLatest } from "@redux-saga/core/effects";
 
 
 import { REQUEST_CATEGORY_API_DATA, recieveCategoryApiData } from '../actions/CategoryAction';
-import { getApi } from "../service/api";
+import { api } from "../service/api";
 const CATEGORY_API_URL = "user-nftify/category/list";
 function* getCategoryData(action) {
     console.log(action);
     try{
-        
-            const data = yield getApi(CATEGORY_API_URL);
+            const data = yield api.get(CATEGORY_API_URL);
             console.log(data,"category")
             yield put(recieveCategoryApiData(data));
-            // console.log(data);
-        
     } catch(e) {
         console.log(e);
     }

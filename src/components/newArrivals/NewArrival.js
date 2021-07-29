@@ -1,42 +1,32 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import NewArrivalItem from './NewArrivalItem';
 import { useDispatch,useSelector } from 'react-redux';
-import { requestProductApiData } from '../../actions/ProductAction';
+import { requestNewArrivalApiData } from '../../actions/NewArrivalAction';
+import NewArrivalHeader from './NewArrivalHeader';
 
 export default function NewArrival() {
-    // 
+    const [newArrivals, setNewArrivals] = useState([]);
     const dispatch = useDispatch();
-    const products = useSelector(state => state.product);
-    console.log(products,'newArrival');
-
+    const products = useSelector(state => state.newArrival);
+    console.log(products,'newArrival aaaaa');
     useEffect(() => {
-        dispatch(requestProductApiData());
+        dispatch(requestNewArrivalApiData());
     },[])
-    const listProductNew = products.filter((product) => (product.sellOrder).status === 1);
     
-    // console.log(listProductNew);
+    useEffect(() =>{
+        setNewArrivals(products);
+    },[products])
+    
+    const listProductNew = newArrivals.filter((product) => (product.sellOrder).status === 1);
+    // const listProductComing = newArrivals.filter((product) => (product.sellOrder).status == 2);
     return (
-        <div className="NewArrival">
+        <div className="new-arrival">
             <div className="container">
-                <div className="NewArrival-content">
-                    <div className="NewArrival-header">
-                        <h2 className="NewArrival-title">New Arrivals</h2>
-                        <a href="#" className="NewArrival-browse-all">Browse all</a>
-                    </div>
-                    <div className="NewArrival-list row">
-                        {listProductNew.map((product,index) => (
-                            <NewArrivalItem 
-                                key={index}
-                                itemImg={product.imageUrl}
-                                nameOfItem={product.name}
-                                numberOfCopies={product.numberOfCopies}
-                                saleQuantity={(product.sellOrder).saleQuantity}
-                                currencyName={(product.sellOrder).currencyName}
-                                price={(product.sellOrder).price}
-                                realPrice={(product.sellOrder).price * (product.sellOrder).exchangeRate}
-                            />
-                        ))}
-                    </div>
+                <div className="new-arrival-content">
+                    <NewArrivalHeader/>
+                    <NewArrivalItem 
+                        NewArrivalList={listProductNew} 
+                    />
                 </div>
             </div>
         </div>

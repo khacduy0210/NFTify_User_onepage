@@ -4,11 +4,8 @@ const CategoryInitialState = []
 const CategoryReducer = (state = CategoryInitialState, action) => {
     console.log(action,"action")
     switch (action.type) {
-        // console.log('aaa');
         case RECIEVE_CATEGORY_API_DATA:
-            // console.log(action);
-            return action.data;
-        
+            return action.category_data;
         default:    
             return state;
     }

@@ -1,65 +1,47 @@
-.comingSoon{
+.coming-soon{
     margin: auto;
     padding-bottom: 70px;
-    background: #F8F8FB;
+    background: $color-bg;
     .container{
         max-width: 1120px;
         margin: auto;
-        // padding: 0px;
-        .comingSoon-content{
-            // max-width: 1240px;
-            // margin: auto;
+        .coming-soon-content{
             padding-top: 80px;
-            .comingSoon-header{
+            .coming-soon-header{
                 display: flex;
-                justify-content: space-between;
                 h2{
                     font-weight: 600;
                     font-size: 40px;
                     line-height: 48px;
-                    /* identical to box height, or 120% */
-    
                     letter-spacing: -0.01em;
-    
-                    /* Title */
-    
-                    color: #23262F;
+                    color: $color-title;
                 }
-                a{
+                a{  
+                    margin: 0px 0px 0px auto;
                     font-weight: 500;
                     font-size: 15px;
                     line-height: 22px;
-                    /* identical to box height */
                     padding-top: 22px;
                     text-decoration-line: underline;
-    
-                    /* Content 3 */
-    
-                    color: #777E90;
+                    color: $color-browse;
     
                 }
             }
-            .comingSoon-list{
-                display: flex;
-                // justify-content: space-between;
-                // margin: auto;
-                
+            @media (max-width: 425px) {
+                .coming-soon-header{
+                    flex-direction: column;
+                    a{
+                        margin: 0px;
+                    }
+                }
             }
+            
         }
     }
-    @media (min-width:1440px) {
+    @media (min-width:1121px) {
         .container{
             padding: 0px;
         }
     }
-    @media (min-width:1120px) {
-        .comingSoon-list{
-            margin-right: auto;
-        }
-    }
-    @media (max-width:1119px) {
-        .comingSoon-list{
-            margin: auto;
-        }
-    }
+    
 }

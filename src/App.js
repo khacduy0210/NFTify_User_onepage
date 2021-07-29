@@ -17,9 +17,7 @@ function App() {
         <NewArrival/>
         <ComingSoon/>
         <Category/>
-      
       <Footer/>
-      
     </div>
   );
 }

@@ -1,64 +1,47 @@
-.NewArrival{
+.new-arrival{
     margin: auto;
-    // padding-bottom: 100px;
-    background: #F8F8FB;
+    background: $color-bg;
     .container{
         max-width: 1120px;
         margin: auto;
-        // padding: 0px;
-        .NewArrival-content{
-            max-width: 1240px;
+        .new-arrival-content{
             margin: auto;
             padding-top: 80px;
-            .NewArrival-header{
+            .new-arrival-header{
                 display: flex;
-                justify-content: space-between;
                 h2{
                     font-weight: 600;
                     font-size: 40px;
                     line-height: 48px;
-                    /* identical to box height, or 120% */
-    
                     letter-spacing: -0.01em;
-    
-                    /* Title */
-    
-                    color: #23262F;
+                    color: $color-title;
                 }
                 a{
+                    margin: 0px 0px 0px auto;
                     font-weight: 500;
                     font-size: 15px;
                     line-height: 22px;
-                    /* identical to box height */
                     padding-top: 22px;
                     text-decoration-line: underline;
-    
-                    /* Content 3 */
-    
-                    color: #777E90;
+                    color: $color-browse;
     
                 }
             }
-            .NewArrival-list{
-                display: flex;
-                // justify-content: space-between;
-                // margin: auto;
+            
+            @media (max-width: 425px) {
+                .new-arrival-header{
+                    flex-direction: column;
+                    a{
+                        margin: 0px;
+                    }
+                }
             }
         }
     }
-    @media (min-width:1440px) {
+    @media (min-width:1121px) {
         .container{
             padding: 0px;
         }
     }
-    @media (min-width: 425px) {
-        .NewArrival-list{
-            margin-right: auto;
-        }
-    }
-    @media (max-width: 425px) {
-        .NewArrival-list{
-            margin: auto;
-        }
-    }
+    
 }

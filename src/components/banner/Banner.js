@@ -15,15 +15,7 @@ export default function Banner() {
     return(
         <div className="banner">
             <div className="container">
-                
-                {banners.map((banner,index) => (
-                    <BannerItem 
-                        key={index}
-                        banner={banner.banner}
-                        title={banner.title}
-                        discription={banner.discription}
-                    />
-                ))}
+                <BannerItem banners={banners}/>
             </div>
         </div>
     )

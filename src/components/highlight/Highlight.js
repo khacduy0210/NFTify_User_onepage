@@ -13,6 +13,7 @@ import { requestHighlightApiData } from '../../actions/HighlightAction';
 export default function Highlight() {
     const dispatch = useDispatch();
     const products = useSelector(state => state.highlight);
+    console.log(products,"highlight");
     useEffect(() => {
         dispatch(requestHighlightApiData());
     },[])
@@ -24,7 +25,7 @@ export default function Highlight() {
                     <div className="highlight-header">
                         <h2 className="highlight-title">Highlight</h2>
                     </div>
-                    <div className="highlight-list">
+                    {/* <div className="highlight-list">
                         <div className="highlight-item">
                             {products.map((product,index) => 
                                 { 
@@ -116,17 +117,14 @@ export default function Highlight() {
                                             />
                                         )
                                     };
-                                    
-                                
-                                    
-                                    
+                                 
                                 }
                             )}
                         </div>
                             
 
                         </div>
-                    </div>
+                    </div> */}
                     
                 </div>
             </div>
