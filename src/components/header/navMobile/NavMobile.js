@@ -1,9 +1,6 @@
 import React from 'react';
 import bars from '../../../assets/icon-bars.svg';
-
 import NavBar from './NavBar';
-import NavMobileSearchBar from './NavMobileSearchBar';
-
 
 export default function NavMobile() {
     return (
@@ -14,7 +11,6 @@ export default function NavMobile() {
             <input type="checkbox" id="checkbox-bars" style={{display : 'none'}}/>
             <label htmlFor="checkbox-bars" className="nav-overlay"/>
             <NavBar/>
-            <NavMobileSearchBar/>
         </>
     )
 }

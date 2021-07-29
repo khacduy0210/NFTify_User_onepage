@@ -1,0 +1,152 @@
+.highlight-list{
+    padding-top: 44px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.8fr 0.2fr;
+    grid-gap: 54px;
+    .highlight-item{
+        display: grid;
+        grid-template-columns: 0.6fr 0.4fr;
+        grid-gap: 58px;
+        width: 100%;
+        height: auto;
+        .highlight-image{
+            width: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 16px;
+            }
+        }
+        .highlight-discription{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .highlight-name{
+                font-weight: bold;
+                font-size: 48px;
+                line-height: 50px;
+                letter-spacing: -0.02em;
+                color: #23262F;
+            }
+            .highlight-tag{
+                padding-top: 15px;
+                max-width: auto;
+                margin-left: 0px;
+                // display: block;
+                .highlight-tag-item{
+                    margin-top: 5px;
+                    margin-right: 8px;
+                    padding:3px 16px;
+                    height: 32px;
+                    background: #E6E6E6;
+                    border-radius: 30px;
+                    //text
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 26px;
+                    color: #4F5566;
+    
+                }
+            }
+            .highlight-edit{
+                padding-top: 23px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                color: #23262F;
+            }
+            .highlight-price{
+                padding-top: 2px;
+                font-weight: 600;
+                font-size: 38px;
+                line-height: 46px;
+                letter-spacing: -0.02em;
+                color: #23262F;
+            }
+            .hilight-real-price{
+                padding-top: 2px;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 25px;
+                color: #777E90;
+            }
+            .highlight-discript{
+                padding-top: 20px;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 22px;
+                color: #777E90;
+            }
+            .read-more{
+                padding-top: 12px;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.1px;
+                text-decoration-line: underline;
+                color: #3772FF;
+            }
+            .highlight-button{
+                margin-top: auto;
+                .buy-now{
+                    margin-top: 28px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 16px 24px;
+                    width: 100%;
+                    height: 48px;
+                    border: none;
+                    background: #3772FF;
+                    border-radius: 90px;
+                    //text
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 16px;
+                    text-align: center;
+                    color: #FCFCFD;
+                    flex: none;
+                    order: 0;
+                    flex-grow: 0;
+                    
+                }
+                .make-offer{
+                    margin-top: 8px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 16px 24px;
+                    width: 100%;
+                    height: 48px;
+                    border: 2px solid #E6E8EC;
+                    box-sizing: border-box;
+                    border-radius: 90px;
+                    //text
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 16px;
+                    text-align: center;
+                    color: #23262F;
+                    flex: none;
+                    order: 0;
+                    flex-grow: 0;
+                }
+            }
+            
+        }
+    }
+    @media (max-width:768px) {
+        .highlight-item{
+            grid-template-columns: 1fr;
+        }
+    }
+}
+@media (max-width: 1120px) {
+    .highlight-list{
+        grid-template-columns: 1fr;
+    }
+}

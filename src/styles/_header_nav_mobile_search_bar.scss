@@ -1,3 +1,4 @@
+
 #checkbox-search:checked ~ .search-bar{
     transform: translateX(0%);
 }
@@ -41,7 +42,8 @@
             width: 90%;
             background: #FFFFFF; 
             border:none;
-            border-color: none;
+            outline: none;
+            // border-color: none;
         }
         .mobile-icon-search{
             margin: auto 10px auto auto;

@@ -8,14 +8,15 @@
         box-sizing: border-box;
         border-radius: 4px;
         .search-input { 
-            width: 85%;
+            padding-left: 10px;
+            width: 90%;
             background: $color-bg; 
             border:none;
             border-color: none;
+            outline: none;
         }
         .icon-search{
-            margin: auto;
-            width: 15%;
+            margin: auto 10px auto auto;
             // padding: auto;
         }  
     }
