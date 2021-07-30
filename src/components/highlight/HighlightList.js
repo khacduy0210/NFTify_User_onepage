@@ -1,4 +1,3 @@
-
 import React from 'react';
 import HighlightItem from './HighlightItem';
 import HighlightOther from './HighlightOther';
@@ -12,11 +11,10 @@ export default function HighlightList({highlightList}) {
             {highlightList.map((item,index) => {
                 return (
                     index === 0 ? 
-                    <HighlightItem item={item}/>
-                    : <></>
+                        <HighlightItem item={item}/>
+                    :   <HighlightOther item={item}/>
                 )
             })}
-            <HighlightOther items={listOther}/>
         </div>
     );
 }

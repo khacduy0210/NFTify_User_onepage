@@ -1,7 +1,3 @@
-.highlight-other{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 10px;
     .other-item{
         height: auto;
         background: $color-item-bg;
@@ -82,14 +78,3 @@
             }
         }
     }
-}
-@media (max-width:1120px) {
-    .highlight-other{
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-@media (max-width:425px) {
-    .highlight-other{
-        grid-template-columns: repeat(1,1fr);
-    }
-}

@@ -2,6 +2,7 @@
 #checkbox-search:checked ~ .search-bar{
     transform: translateX(0%);
 }
+
 .search-bar{
     z-index: 3;
     position: fixed;

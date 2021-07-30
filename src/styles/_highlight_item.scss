@@ -2,10 +2,15 @@
     padding-top: 44px;
     margin: auto;
     display: grid;
-    grid-template-columns: 0.8fr 0.2fr;
-    grid-gap: 54px;
+    grid-template-columns: 0.4fr 0.4fr 0.2fr;
+    grid-column-gap: 54px;
+    grid-row-gap:10px;
     .highlight-item{
         display: grid;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
         grid-template-columns: 0.6fr 0.4fr;
         grid-gap: 58px;
         width: 100%;
@@ -147,6 +152,16 @@
 }
 @media (max-width: 1120px) {
     .highlight-list{
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-column-gap: 16px;
+        grid-row-gap:54px;
+    }
+}
+@media (max-width: 425px) {
+    .highlight-list{
         grid-template-columns: 1fr;
+        .highlight-item{
+            grid-column-end: 1;
+        }
     }
 }
