@@ -1,8 +1,6 @@
-
 #checkbox-search:checked ~ .search-bar{
     transform: translateX(0%);
 }
-
 .search-bar{
     z-index: 3;
     position: fixed;
@@ -12,7 +10,7 @@
     bottom: 0;
     width: 320px;
     max-width: 100%;
-    background: #FFFFFF;
+    background: $color-nav-mobile-bg;
     padding: 25px;
     transform: translateX(-100%);
     animation-name: In;
@@ -35,20 +33,18 @@
         height: 40px;
         display: flex;
         border-width: 2px;
-        border: 2px solid #bfc2c7;
+        border: 2px solid $color-mobie-search-border;
         box-sizing: border-box;
         border-radius: 4px;
         .mobile-search-input { 
             padding-left: 10px;
             width: 90%;
-            background: #FFFFFF; 
+            background: $color-nav-mobile-bg; 
             border:none;
             outline: none;
-            // border-color: none;
         }
         .mobile-icon-search{
             margin: auto 10px auto auto;
-
         }  
     }
 }
@@ -56,10 +52,8 @@
 @keyframes In{
     from {
         opacity: 0;
-        // top: 0px;
     }
     to {
         opacity: 1;
-        // top: 18px;
     }
 }

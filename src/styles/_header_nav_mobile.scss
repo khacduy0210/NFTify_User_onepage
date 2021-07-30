@@ -1,5 +1,4 @@
 .nav-mobile{
-    color: #FFFFFF;
     display: none;   
     margin: auto 10px auto 0;
     .bars-icon{
@@ -25,7 +24,7 @@
     display: none;
     animation-name: FadeIn;
     animation-duration: 0.3s;
-    background-color: rgba($color: #000000, $alpha: 0.3) ;
+    background-color: rgba($color: $color-overlay-bg, $alpha: 0.3) ;
 }
 .navbar-mobile{
     display: flex;
@@ -38,7 +37,7 @@
     bottom: 0;
     width: 320px;
     max-width: 100%;
-    background: #FFFFFF;
+    background: $color-nav-mobile-bg;
     padding: 25px;
     transform: translateX(-100%);
     animation-name: FadeIn;
@@ -73,7 +72,6 @@
     .nav-mobile-button{
         margin-top: auto;
         .button-search-mobile{
-            
             margin:0px;
             padding-top: 10px;
             width: 100%;
@@ -89,7 +87,6 @@
         }
         
         .button-connect-wallet-mobile{
-            
             margin-top: 20px;
             width: 100%;
             height: 40px;
@@ -114,10 +111,8 @@
 @keyframes FadeIn{
     from {
         opacity: 0;
-        // top: 0px;
     }
     to {
         opacity: 1;
-        // top: 18px;
     }
 }

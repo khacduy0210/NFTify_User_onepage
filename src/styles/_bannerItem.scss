@@ -21,7 +21,7 @@
                 font-weight: 600;
                 font-size: 48px;
                 line-height: 58px;
-                color: #FFFFFF;
+                color: $color-banner-title-color;
     
             }
             .banner-discription{
@@ -32,7 +32,7 @@
                 font-size: 18px;
                 line-height: 27px;
                 text-align: center;
-                color: #E6E7F5;
+                color: $color-banner-discript-color;
             }
             .explore-button{
                 margin-top: 24px;
@@ -42,13 +42,13 @@
                 left: 815px;
                 bottom: 4260px;
                 border: none;
-                background: #3772FF;
+                background: $color-banner-button-bg;
                 border-radius: 30px;
                 font-weight: 600;
                 font-size: 16px;
                 line-height: 26px;
                 text-align: center;
-                color: #FFFFFF;
+                color: $color-banner-button-color;
             }
         }
         @media (max-width:1120px) {
