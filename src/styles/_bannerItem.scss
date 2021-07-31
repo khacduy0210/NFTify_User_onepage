@@ -1,20 +1,21 @@
-.banner-item{
+.banner-item {
     width: 100%;
     height: auto;
     // position: relative;
-    .banner-image{
-        background-image: url('../assets/banner.png');
+    .banner-image {
+        background-image: url("../assets/banner.png");
+        object-fit: cover;
         width: 100%;
         height: auto;
         border-radius: 25px;
-        .banner-content{
+        .banner-content {
             max-width: 1120px;
             width: 100%;
-            padding-bottom:131px;
+            padding-bottom: 131px;
             padding-top: 131px;
             height: auto;
             text-align: center;
-            .banner-title{
+            .banner-title {
                 margin: auto;
                 max-width: 555px;
                 width: 100%;
@@ -22,9 +23,8 @@
                 font-size: 48px;
                 line-height: 58px;
                 color: $color-banner-title-color;
-    
             }
-            .banner-discription{
+            .banner-discription {
                 max-width: 555px;
                 width: 100%;
                 margin: 16px auto 0;
@@ -34,7 +34,7 @@
                 text-align: center;
                 color: $color-banner-discript-color;
             }
-            .explore-button{
+            .explore-button {
                 margin-top: 24px;
                 max-width: 191px;
                 width: 100%;
@@ -51,18 +51,16 @@
                 color: $color-banner-button-color;
             }
         }
-        @media (max-width:1120px) {
-            .banner-image{
+        @media (max-width: 1120px) {
+            .banner-image {
                 border-radius: none;
             }
         }
-        @media (max-width:1024px) {
-            .banner-content{
-                padding-bottom:50px;
+        @media (max-width: 1024px) {
+            .banner-content {
+                padding-bottom: 50px;
                 padding-top: 50px;
             }
         }
     }
-    
-
 }

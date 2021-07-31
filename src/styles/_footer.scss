@@ -1,130 +1,144 @@
-.footer{
+.footer {
     width: auto;
     background: $color-ft-bg;
     padding-top: 66px;
     padding-bottom: 148px;
     border-top: 1px solid $color-ft-border;
-    .container{
+    .container {
         max-width: 1120px;
         width: 100%;
         margin: 0 auto 0;
         display: flex;
-            .logo{
-                width: 25%;
-                .dicription{
-                    max-width: 142px;
-                    font-size: 18px;
-                    line-height: 27px;
-                    font-weight: 500;
-                    margin-top: 20px;
-                    letter-spacing: -0.01em;
-                    color: $color-ft-dicript;
-                }
+        .logo {
+            width: 25%;
+            .dicription {
+                max-width: 142px;
+                font-size: 18px;
+                line-height: 27px;
+                font-weight: 500;
+                margin-top: 20px;
+                letter-spacing: -0.01em;
+                color: $color-ft-dicript;
             }
-        
-            .about {
-                width: 20%;
-                color: $color-ft-title;
-                font-weight: 620;
-                font-size: 16px;
-                line-height: 26px;
-                padding: 0px;
-                
-                .about-list{
-                    padding-top: 18px;
-                    flex-direction: column;
-                    list-style: none;
-                    margin-left: 0px;
-                    font-weight: 500;
-                    font-size: 14px;
-                    line-height: 21px;
-                    .about-item{
-                        padding-top: 10px;
-                        a{
-                            color: $color-ft-item;
-                            text-decoration: none;
-                        }
-                        :hover {
-                            color: $color-ft-title;
-                        }
-                    }
-                }
-        
-            }
-            .contact{
-                width: 25%;
-                color: $color-ft-title;
-                font-weight: 620;
-                font-size: 16px;
-                line-height: 26px;
-                padding: 0px;
-                .contact-list{
-                    padding-top: 18px;
-                    .contact-item{
-                        flex-direction: column;
-                        margin-top: 10px;
+        }
+
+        .about {
+            width: 20%;
+            color: $color-ft-title;
+            font-weight: 620;
+            font-size: 16px;
+            line-height: 26px;
+            padding: 0px;
+
+            .about-list {
+                padding-top: 18px;
+                flex-direction: column;
+                list-style: none;
+                margin-left: 0px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                .about-item {
+                    padding-top: 10px;
+                    a {
+                        color: $color-ft-item;
                         text-decoration: none;
-                        a{
-                            color: $color-ft-item;
-                            text-decoration: none;
-                            span{
-                                font-family: 'FontAwesome';
-                                padding-top: 6px;
-                                padding-right: 5px;
-                            }
-                        }
                     }
-                    a:hover{
+                    :hover {
                         color: $color-ft-title;
                     }
-                        
                 }
             }
-            .social-media{
-                width: 30%;
-                color: $color-ft-title;
-                font-weight: 620;
-                font-size: 16px;
-                line-height: 26px;
-                padding: 0px;
-                .socail-list{
-                    padding-top: 30px;
-                    display: flex;
-                    
-                    margin: auto;
-                    .icon{
-                        width: 20%;
-                        height: 100%;
+        }
+        .contact {
+            width: 25%;
+            color: $color-ft-title;
+            font-weight: 620;
+            font-size: 16px;
+            line-height: 26px;
+            padding: 0px;
+            .contact-list {
+                padding-top: 18px;
+                .contact-item {
+                    flex-direction: column;
+                    margin-top: 10px;
+                    text-decoration: none;
+                    a {
+                        color: $color-ft-item;
+                        text-decoration: none;
+                        span {
+                            font-family: "FontAwesome";
+                            padding-top: 6px;
+                            padding-right: 5px;
+                        }
                     }
-                    
+                }
+                a:hover {
+                    color: $color-ft-title;
                 }
             }
+        }
+        .social-media {
+            width: 30%;
+            color: $color-ft-title;
+            font-weight: 620;
+            font-size: 16px;
+            line-height: 26px;
+            padding: 0px;
+            .socail-list {
+                padding-top: 30px;
+                display: flex;
+                margin: auto;
+                .icon {
+                    width: 20%;
+                    height: 100%;
+                }
+            }
+        }
     }
-    @media (min-width:1121px) {
-        .container{
+    @media (min-width: 1121px) {
+        .container {
             padding: 0px;
         }
     }
-    @media (max-width:768px) {
-        .container{
+    @media (max-width: 768px) {
+        .container {
             flex-direction: row;
-            .logo{
+            .logo {
                 width: 100%;
             }
-            .about{
+            .about {
                 width: 50%;
+                margin-top: 30px;
+                .about-list {
+                    padding-top: 0px;
+                }
             }
-            .contact{
+            .contact {
                 width: 50%;
+                margin-top: 30px;
+                .contact-list {
+                    padding-top: 0px;
+                }
             }
-            .social-media{
-                width: 80%;
+            .social-media {
+                width: 50%;
+                margin-top: 30px;
             }
         }
     }
-    @media (max-width:425px) {
-        .container{
-            flex-direction: column;    
+    @media (max-width: 425px) {
+        .container {
+            flex-direction: column;
+            .about {
+                width: 100%;
+            }
+            .contact {
+                width: 100%;
+            }
+            .social-media {
+                width: 100%;
+            }
         }
     }
 }

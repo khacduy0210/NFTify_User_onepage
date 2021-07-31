@@ -1,26 +1,32 @@
-.header-button{
-    display: flex;    
-    .search-form{
+.header-button {
+    display: flex;
+    .search-form {
         height: 40px;
         display: flex;
         border-width: 2px;
         border: 2px solid $color-mobie-search-border;
         box-sizing: border-box;
         border-radius: 4px;
-        .search-input { 
+        input[type="search"]::-webkit-search-decoration,
+        input[type="search"]::-webkit-search-cancel-button,
+        input[type="search"]::-webkit-search-results-button,
+        input[type="search"]::-webkit-search-results-decoration {
+            -webkit-appearance: none;
+        }
+        .search-input {
             padding-left: 10px;
             width: 90%;
-            background: $color-bg; 
-            border:none;
+            background: $color-bg;
+            border: none;
             border-color: none;
             outline: none;
         }
-        .icon-search{
+        .icon-search {
             margin: auto 10px auto auto;
             // padding: auto;
-        }  
+        }
     }
-    
+
     .button-connect-wallet {
         max-width: 144px;
         width: 100%;
@@ -34,9 +40,8 @@
         background: $color-button-wallet;
         border-radius: 30px;
         border: none;
-        
     }
-    .change-NFT{
+    .change-NFT {
         max-width: 40px;
         width: 100%;
         height: 40px;
@@ -47,8 +52,8 @@
         box-sizing: border-box;
     }
 }
-@media (max-width:1023px) {
-    .header-button{
+@media (max-width: 1023px) {
+    .header-button {
         display: none;
     }
 }

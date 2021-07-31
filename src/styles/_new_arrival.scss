@@ -1,22 +1,22 @@
-.new-arrival{
+.new-arrival {
     margin: auto;
     background: $color-bg;
-    .container{
+    .container {
         max-width: 1120px;
         margin: auto;
-        .new-arrival-content{
+        .new-arrival-content {
             margin: auto;
             padding-top: 80px;
-            .new-arrival-header{
+            .new-arrival-header {
                 display: flex;
-                h2{
+                h2 {
                     font-weight: 600;
                     font-size: 40px;
                     line-height: 48px;
                     letter-spacing: -0.01em;
                     color: $color-title;
                 }
-                a{
+                a {
                     margin: 0px 0px 0px auto;
                     font-weight: 500;
                     font-size: 15px;
@@ -24,24 +24,22 @@
                     padding-top: 22px;
                     text-decoration-line: underline;
                     color: $color-browse;
-    
                 }
             }
-            
+
             @media (max-width: 425px) {
-                .new-arrival-header{
+                .new-arrival-header {
                     flex-direction: column;
-                    a{
+                    a {
                         margin: 0px;
                     }
                 }
             }
         }
     }
-    @media (min-width:1121px) {
-        .container{
+    @media (min-width: 1121px) {
+        .container {
             padding: 0px;
         }
     }
-    
 }

@@ -1,38 +1,39 @@
-.coming-soon-list{
+.coming-soon-list {
     display: grid;
-    grid-template-columns: repeat(4 ,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 16px;
     margin-top: 35px;
-    .coming-soon-item{
+    .coming-soon-item {
         height: auto;
         background: $color-item-bg;
         flex-direction: column;
         box-shadow: 0px 64px 64px -48px $color-item-box-shadow;
         border-radius: 16px;
-        .coming-soon-item-content{
+        .coming-soon-item-content {
             margin: auto;
             padding: 18px;
-            .coming-soon-item-image{
+            .coming-soon-item-image {
                 position: relative;
                 padding-top: 100%;
                 width: 100%;
                 height: auto;
                 margin: 0px 0px 16px 0px;
-                img{
+                img {
                     position: absolute;
+                    object-fit: cover;
                     top: 0px;
                     width: 100%;
                     height: 100%;
                     border-radius: 12px;
                 }
             }
-            .coming-soon-item-name{
+            .coming-soon-item-name {
                 font-weight: 600;
                 font-size: 16px;
                 line-height: 26px;
                 color: $color-item-name;
             }
-            .coming-soon-item-edit{
+            .coming-soon-item-edit {
                 font-weight: 500;
                 font-size: 14px;
                 line-height: 21px;
@@ -40,7 +41,7 @@
                 padding-top: 4px;
                 padding-bottom: 8px;
             }
-            .coming-soon-item-status{
+            .coming-soon-item-status {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
@@ -66,19 +67,18 @@
         }
     }
 }
-@media (max-width:1023px) {
-    .coming-soon-list{
-        grid-template-columns: repeat(3 ,1fr);
+@media (max-width: 1024px) {
+    .coming-soon-list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
-@media (max-width:768px) {
-    .coming-soon-list{
-        grid-template-columns: repeat(2 ,1fr);
+@media (max-width: 768px) {
+    .coming-soon-list {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (max-width:425px) {
-    .coming-soon-list{
+@media (max-width: 425px) {
+    .coming-soon-list {
         grid-template-columns: 1fr;
     }
 }
-

@@ -1,38 +1,39 @@
-.new-arrival-list{
+.new-arrival-list {
     display: grid;
-    grid-template-columns: repeat(4 ,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 16px;
     margin-top: 35px;
-    .new-arrival-item{
+    .new-arrival-item {
         height: auto;
         background: $color-item-bg;
         flex-direction: column;
         box-shadow: 0px 64px 64px -48px $color-item-box-shadow;
         border-radius: 16px;
-        .new-arrival-item-content{
+        .new-arrival-item-content {
             margin: auto;
             padding: 18px;
-            .new-arrival-item-image{
+            .new-arrival-item-image {
                 position: relative;
                 padding-top: 100%;
                 width: 100%;
                 height: auto;
                 margin: 0px 0px 16px 0px;
-                img{
+                img {
                     position: absolute;
+                    object-fit: cover;
                     top: 0px;
                     width: 100%;
                     height: 100%;
                     border-radius: 12px;
                 }
             }
-            .new-arrival-item-name{
+            .new-arrival-item-name {
                 font-weight: 600;
                 font-size: 16px;
                 line-height: 26px;
                 color: $color-item-name;
             }
-            .new-arrival-item-edit{
+            .new-arrival-item-edit {
                 font-weight: 500;
                 font-size: 14px;
                 line-height: 21px;
@@ -40,13 +41,13 @@
                 padding-top: 4px;
                 padding-bottom: 8px;
             }
-            .new-arrival-item-price{
+            .new-arrival-item-price {
                 font-weight: bold;
                 font-size: 16px;
                 line-height: 26px;
                 letter-spacing: -0.003em;
                 color: $color-item-price;
-                span{
+                span {
                     font-weight: 500;
                     font-size: 14px;
                     line-height: 21px;
@@ -60,18 +61,18 @@
         }
     }
 }
-@media (max-width:1023px) {
-    .new-arrival-list{
-        grid-template-columns: repeat(3 ,1fr);
+@media (max-width: 1024px) {
+    .new-arrival-list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
-@media (max-width:768px) {
-    .new-arrival-list{
-        grid-template-columns: repeat(2 ,1fr);
+@media (max-width: 768px) {
+    .new-arrival-list {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (max-width:425px) {
-    .new-arrival-list{
+@media (max-width: 425px) {
+    .new-arrival-list {
         grid-template-columns: 1fr;
     }
-} 
+}

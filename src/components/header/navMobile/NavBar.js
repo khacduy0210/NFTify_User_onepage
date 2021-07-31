@@ -1,15 +1,15 @@
-import React from 'react';
-import NavMobileItem from './NavMobileItem';
-import NavMobileHeader from './NavMobileHeader';
-import NavMobileButton from './NavMobileButton';
+import React from "react";
+import NavMobileItem from "./NavMobileItem";
+import NavMobileHeader from "./NavMobileHeader";
+import NavMobileButton from "./NavMobileButton";
 
 export default function NavBar() {
-    return(  
+    return (
         <>
             <div className="navbar-mobile">
-                <NavMobileHeader/>
-                <NavMobileItem/>
-                <NavMobileButton/>
+                <NavMobileHeader />
+                <NavMobileItem />
+                <NavMobileButton />
             </div>
         </>
     );

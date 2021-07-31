@@ -1,20 +1,21 @@
-.nav-mobile{
-    display: none;   
+.nav-mobile {
+    display: none;
     margin: auto 10px auto 0;
-    .bars-icon{
+    .bars-icon {
         width: 35px;
         height: 35px;
-        
     }
-
 }
-#checkbox-bars:checked~.nav-overlay {
+#checkbox-bars {
+    display: none;
+}
+#checkbox-bars:checked ~ .nav-overlay {
     display: block;
 }
-#checkbox-bars:checked~.navbar-mobile {
+#checkbox-bars:checked ~ .navbar-mobile {
     transform: translateX(0%);
 }
-.nav-overlay{
+.nav-overlay {
     position: fixed;
     height: 100%;
     top: 0px;
@@ -24,9 +25,9 @@
     display: none;
     animation-name: FadeIn;
     animation-duration: 0.3s;
-    background-color: rgba($color: $color-overlay-bg, $alpha: 0.3) ;
+    background-color: rgba($color: $color-overlay-bg, $alpha: 0.3);
 }
-.navbar-mobile{
+.navbar-mobile {
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -43,25 +44,25 @@
     animation-name: FadeIn;
     animation-duration: 0.7s;
     transition: transform linear 0.3s;
-    .navbar-mobile-header{
+    .navbar-mobile-header {
         display: flex;
         justify-content: space-between;
-        .nav-mobile-close{
+        .nav-mobile-close {
             float: right;
-            .close-icon{
+            .close-icon {
                 width: 20px;
                 height: 20px;
             }
         }
     }
-    
-    ul{
+
+    ul {
         padding: 0px;
         margin-top: 10px;
-        .nav_mobile-item{
+        .nav_mobile-item {
             list-style: none;
             padding-top: 15px;
-            a{  
+            a {
                 text-decoration: none;
                 color: $color-title;
                 font-size: 16px;
@@ -69,10 +70,13 @@
             }
         }
     }
-    .nav-mobile-button{
+    .nav-mobile-button {
         margin-top: auto;
-        .button-search-mobile{
-            margin:0px;
+        #checkbox-search {
+            display: none;
+        }
+        .button-search-mobile {
+            margin: 0px;
             padding-top: 10px;
             width: 100%;
             height: 40px;
@@ -85,8 +89,8 @@
             border-radius: 30px;
             border: none;
         }
-        
-        .button-connect-wallet-mobile{
+
+        .button-connect-wallet-mobile {
             margin-top: 20px;
             width: 100%;
             height: 40px;
@@ -102,13 +106,12 @@
     }
 }
 @media (max-width: 1023px) {
-    .nav-mobile{
+    .nav-mobile {
         display: block;
     }
-    
 }
 
-@keyframes FadeIn{
+@keyframes FadeIn {
     from {
         opacity: 0;
     }

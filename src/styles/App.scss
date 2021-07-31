@@ -1,36 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap");
 @import "~bootstrap/scss/bootstrap";
 //Utility
-@import './reset';
-@import './variables';
+@import "./reset";
+@import "./variables";
 
 //Page
-@import './index.scss';
+@import "./index.scss";
 
 //Components
-@import './header';
-@import './header_nav_mobile';
-@import './header_nav_mobile_search_bar';
-@import './header_button';
-@import './footer';
-//banner 
-@import './banner';
-@import './bannerItem';
+@import "./header";
+@import "./header_nav_mobile";
+@import "./header_nav_mobile_search_bar";
+@import "./header_button";
+@import "./footer";
+//banner
+@import "./banner";
+@import "./bannerItem";
 
 //highlight
-@import './highlight';
-@import './highlight_item';
-@import './highlight_other';
+@import "./highlight";
+@import "./highlight_item";
+@import "./highlight_other";
 
 // new arivals
-@import './new_arrival';
-@import './new_arrival_item';
+@import "./new_arrival";
+@import "./new_arrival_item";
 
 //coming soon
-@import './coming_soon';
-@import './coming_soon_item';
+@import "./coming_soon";
+@import "./coming_soon_item";
 
-
-   //category
-@import './category';
-@import './categoryItem';
+//category
+@import "./category";
+@import "./categoryItem";
