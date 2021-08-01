@@ -1,0 +1,16 @@
+.no-data {
+    text-align: center;
+    .icon-nodata {
+        img {
+            width: 74px;
+            height: 74px;
+        }
+    }
+    .text-nodata {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 27px;
+        color: $color-nodata-text;
+    }
+}

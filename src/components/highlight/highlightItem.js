@@ -19,7 +19,7 @@ export default function HighlightItem({ item }) {
                     })}
                 </div>
                 <div className="highlight-edit">
-                    Edition {item.sellOrder.saleQuantity} of{" "}
+                    Edition {item.sellOrder.saleQuantity} of
                     {item.sellOrder.numberOfCopies}
                 </div>
                 <div className="highlight-price">
@@ -33,7 +33,7 @@ export default function HighlightItem({ item }) {
                     Nulla quam velit, vulputate eu pharetra nec, mattis ac
                     neque. Duis vulputate commodo lectus, ac blandit elit
                     tincidunt id. Sed rhoncus, tortor sed eleifend tristique,
-                    tortor mauris{" "}
+                    tortor mauris
                 </div>
                 <div className="read-more">Read more</div>
                 <div className="highlight-button">

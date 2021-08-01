@@ -1,6 +1,9 @@
 import React from "react";
 
-export default function ComingSoonItem({ ComingSoonList }) {
+export default function ComingSoonItem({ ComingSoons }) {
+    const ComingSoonList = ComingSoons.filter(
+        (product) => product.sellOrder.status == 2,
+    );
     console.log(ComingSoonList, "test cs list");
     return (
         <div className="coming-soon-list">

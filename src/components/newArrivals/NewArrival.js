@@ -3,28 +3,25 @@ import NewArrivalItem from "./NewArrivalItem";
 import { useDispatch, useSelector } from "react-redux";
 import { requestNewArrivalApiData } from "../../actions/NewArrivalAction";
 import NewArrivalHeader from "./NewArrivalHeader";
+import NoData from "../NoData";
 
 export default function NewArrival() {
-    const [newArrivals, setNewArrivals] = useState([]);
     const dispatch = useDispatch();
     const products = useSelector((state) => state.homedata.new_arrival);
     console.log(products, "newArrival aaaaa");
     useEffect(() => {
         dispatch(requestNewArrivalApiData());
     }, []);
-
-    useEffect(() => {
-        setNewArrivals(products);
-    }, [products]);
-    const listProductNew = newArrivals.filter(
-        (product) => product.sellOrder.status === 1,
-    );
     return (
         <div className="new-arrival">
             <div className="container">
                 <div className="new-arrival-content">
                     <NewArrivalHeader />
-                    <NewArrivalItem NewArrivalList={listProductNew} />
+                    {typeof products === "object" ? (
+                        <NewArrivalItem NewArrivals={products} />
+                    ) : (
+                        <NoData />
+                    )}
                 </div>
             </div>
         </div>

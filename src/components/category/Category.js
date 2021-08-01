@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { requestCategoryApiData } from "../../actions/CategoryAction";
 import CategoryHeader from "./CategoryHeader";
 import CategoryButtonLoadMore from "./CategoryButtonLoadMore";
+import NoData from "../NoData";
 
 export default function Category() {
     const [categories, setCategories] = useState([]);
@@ -37,8 +38,15 @@ export default function Category() {
             <div className="container">
                 <div className="category-content">
                     <CategoryHeader />
-                    <CategaryList categories={categories} />
-                    <CategoryButtonLoadMore />
+                    {typeof category === "object" ? (
+                        <>
+                            <CategaryList categories={categories} />
+                            <CategoryButtonLoadMore />
+                        </>
+                    ) : (
+                        <NoData />
+                    )}
+                    
                 </div>
             </div>
         </div>

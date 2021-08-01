@@ -7,6 +7,7 @@ import ComingSoon from "./components/comingSoon/ComingSoon";
 import NewArrival from "./components/newArrivals/NewArrival";
 import Highlight from "./components/highlight/Highlight";
 import Banner from "./components/banner/Banner";
+import 'antd/dist/antd.css';
 
 function App() {
     return (

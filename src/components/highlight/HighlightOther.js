@@ -9,7 +9,7 @@ export default function HighlightOther({ item }) {
                 </div>
                 <div className="other-item-name">{item.name}</div>
                 <div className="other-item-edit">
-                    Edition {item.saleQuantity} of {item.numberOfCopies}{" "}
+                    Edition {item.saleQuantity} of {item.numberOfCopies}
                 </div>
                 {item.sellOrder.status === 2 ? (
                     <div className="other-item-status">COMING SOON</div>
@@ -17,7 +17,6 @@ export default function HighlightOther({ item }) {
                     <div className="other-item-price">
                         {item.sellOrder.price} {item.sellOrder.currencyName}
                         <span>
-                            {" "}
                             ~ $
                             {Number(
                                 (

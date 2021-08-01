@@ -1,6 +1,9 @@
 import React from "react";
 
-export default function NewArrivalItem({ NewArrivalList }) {
+export default function NewArrivalItem({ NewArrivals }) {
+    const NewArrivalList = NewArrivals.filter(
+        (product) => product.sellOrder.status === 1,
+    );
     console.log(NewArrivalList, "test na list");
     return (
         <div className="new-arrival-list">
@@ -15,14 +18,13 @@ export default function NewArrivalItem({ NewArrivalList }) {
                                 {NewArrival.name}
                             </div>
                             <div className="new-arrival-item-edit">
-                                Edition {NewArrival.saleQuantity} of{" "}
-                                {NewArrival.numberOfCopies}{" "}
+                                Edition {NewArrival.saleQuantity} of
+                                {NewArrival.numberOfCopies}
                             </div>
                             <div className="new-arrival-item-price">
-                                {NewArrival.sellOrder.price}{" "}
+                                {NewArrival.sellOrder.price}
                                 {NewArrival.sellOrder.currencyName}
                                 <span>
-                                    {" "}
                                     ~ $
                                     {Number(
                                         (

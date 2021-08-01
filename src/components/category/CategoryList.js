@@ -13,7 +13,7 @@ export default function CategaryList({ categories }) {
                             <img
                                 className="category-item-icon"
                                 src={category.iconUrl}
-                            />{" "}
+                            />
                             {category.name}
                         </button>
                     </div>
